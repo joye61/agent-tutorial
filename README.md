@@ -1,4 +1,4 @@
-# Developing AI Agents for JavaScript Programmers
+# AI智能体快速入门教程
 
 > 面向前端 / JavaScript 开发者的 AI Agent 完整开发教程
 >
