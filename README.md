@@ -1,75 +1,78 @@
-# AI智能体快速入门教程
+# JavaScript 程序员的 AI Agent 入门教程
 
-> 面向前端 / JavaScript 开发者的 AI Agent 完整开发教程
->
-> 从基础概念到框架实战，系统掌握 AI Agent 开发技能
+> 面向 JS 开发者：从一个能跑起来的小助手，看懂 Agent 是怎么回事。
+> 大白话为主，少术语，重点是原理，不是排行榜。
 
-## 教程概览
+## 你会做出什么
 
-本项目包含两个循序渐进的子教程：
+一个只读的"制度问答助手"：你问"请假找谁批"，它会先去查制度、带上来源回答；查不到就老实说"不知道"，跑超时就停下。
 
-| 教程 | 简介 | 章节数 |
-|------|------|--------|
-| [AI Agent 开发教程](ai-agent-tutorial/) | 从零开始，系统讲解 AI Agent 核心概念、架构设计到 Electron 桌面应用实战 | 12 章 |
-| [Mastra 中文教程](mastra-tutorial/) | 基于 Mastra v1.10.0，深入掌握这个 TypeScript AI 应用开发框架 | 9 章 |
+所有制度都是虚构数据。以这个小项目为主线，再搞懂：资料变多怎么办？MCP、Skills、Harness、Computer Use 这些热门词到底啥意思？什么时候需要多个 Agent？怎么知道改完真的变好了？
 
-## 完整目录
+## 前置要求
 
-### 📘 AI Agent 开发教程
+会 JS 的函数、对象、数组、`async/await`，懂点 HTTP 就行。不需要机器学习、Python、向量数据库、Docker。
 
-> 从零基础到构建 Electron 桌面 AI Agent 应用
+## 怎么读
 
-| 章节 | 内容 | 难度 |
-|------|------|------|
-| [第 1 章：AI Agent 概述](ai-agent-tutorial/01-AI-Agent概述.md) | Agent 定义、核心组件、应用场景、环境搭建 | ⭐ |
-| [第 2 章：大语言模型基础](ai-agent-tutorial/02-大语言模型基础.md) | LLM 概念、API 调用、流式输出、多轮对话 | ⭐ |
-| [第 3 章：提示词工程](ai-agent-tutorial/03-提示词工程.md) | 提示词技巧、ReAct 模式、System Prompt 设计 | ⭐⭐ |
-| [第 4 章：Agent 核心架构](ai-agent-tutorial/04-Agent核心架构.md) | ReAct、Plan-and-Execute、Reflection 架构 | ⭐⭐ |
-| [第 5 章：Function Calling 与工具使用](ai-agent-tutorial/05-Function-Calling与工具使用.md) | 工具定义、并行调用、MCP 协议 | ⭐⭐ |
-| [第 6 章：RAG 检索增强生成](ai-agent-tutorial/06-RAG检索增强生成.md) | 向量检索、文本分块、RAG 完整实现 | ⭐⭐⭐ |
-| [第 7 章：记忆与上下文管理](ai-agent-tutorial/07-记忆与上下文管理.md) | 短期/长期记忆、摘要压缩、Token 预算 | ⭐⭐⭐ |
-| [第 8 章：多 Agent 协作](ai-agent-tutorial/08-多Agent协作.md) | 流水线、监督者、辩论、黑板架构 | ⭐⭐⭐ |
-| [第 9 章：主流开发框架实战](ai-agent-tutorial/09-主流开发框架实战.md) | Vercel AI SDK、LangChain.js、框架选型 | ⭐⭐ |
-| [第 10 章：Electron 与 Agent 实战](ai-agent-tutorial/10-Electron与Agent实战.md) | 完整的 SmartDesk AI 桌面应用 | ⭐⭐⭐ |
-| [第 11 章：安全、部署与优化](ai-agent-tutorial/11-安全部署与优化.md) | 安全防护、性能优化、打包分发 | ⭐⭐⭐ |
-| [第 12 章：前沿技术与资源](ai-agent-tutorial/12-前沿技术与资源.md) | Computer Use、MCP 生态、学习路线 | ⭐⭐ |
+| 路线 | 顺序 | 读完能干嘛 |
+| --- | --- | --- |
+| 最短入门 | 1 → 2 → 3 → 4 → 5 | 看懂并跑通一个带刹车的小循环 |
+| 做成可用助手 | 接着 6 → 7 → 15 | 有证据、有状态、有测试和安全边界 |
+| 跟上热门词 | 8 → 9 → 10 → 11 | 说清 MCP、Skills、Harness、Computer Use |
+| 做成产品 | 12、13、14 | 按需学协作、框架、桌面集成 |
 
-### 📗 Mastra 中文教程
+**第 15 章是上线前必读，不用先学完所有选修。** 遇到标"选修"的，第一遍可跳过。
 
-> 基于 Mastra v1.10.0，面向中文开发者的系统性框架教程
+## 目录
 
-| 章节 | 内容 | 难度 |
-|------|------|------|
-| [第 1 章：Mastra 概述与快速上手](mastra-tutorial/01-Mastra概述与快速上手.md) | 框架介绍、架构、环境搭建 | ⭐ |
-| [第 2 章：Agent 深度解析](mastra-tutorial/02-Agent深度解析.md) | Agent 配置、生成、流式、结构化输出 | ⭐⭐ |
-| [第 3 章：工具系统与 MCP](mastra-tutorial/03-工具系统与MCP.md) | Tool 创建、MCP 客户端/服务端 | ⭐⭐ |
-| [第 4 章：Workflow 工作流引擎](mastra-tutorial/04-Workflow工作流引擎.md) | 控制流、状态、暂停恢复、嵌套 | ⭐⭐⭐ |
-| [第 5 章：Memory 记忆系统](mastra-tutorial/05-Memory记忆系统.md) | 四种记忆类型、存储适配器、Working Memory | ⭐⭐⭐ |
-| [第 6 章：RAG 检索增强生成](mastra-tutorial/06-RAG检索增强生成.md) | 文档处理、向量存储、检索查询 | ⭐⭐⭐ |
-| [第 7 章：语音能力](mastra-tutorial/07-语音能力.md) | TTS/STT、实时语音、混合提供商 | ⭐⭐ |
-| [第 8 章：评估与可观测性](mastra-tutorial/08-评估与可观测性.md) | 评分器、Live/Trace Evals、Tracing | ⭐⭐⭐ |
-| [第 9 章：部署与生产实践](mastra-tutorial/09-部署与生产实践.md) | Server、云平台、Docker、生产清单 | ⭐⭐⭐ |
+| 章 | 一句话主题 |
+| --- | --- |
+| [01 认识 Agent](01-认识Agent.md) | Agent 是"会查资料再回答"的 AI |
+| [02 模型与 API](02-模型与API.md) | 模型是"接话茬"，不是"数据库" |
+| [03 提示词](03-提示词与输出契约.md) | 把要求说清楚，比夸它有用 |
+| [04 Agent 循环](04-Agent循环.md) | 一个带刹车和护栏的循环 |
+| [05 工具调用](05-工具调用.md) | 模型填表，程序审批执行 |
+| [06 RAG 与 Embedding](06-RAG与Embedding.md) | 开卷考试 + 文字变数字 |
+| [07 上下文与记忆](07-上下文与记忆.md) | 工作台、笔记、真事实，别混 |
+| [08 MCP](08-MCP.md) | 工具的"统一插座" |
+| [09 Agent Skills](09-Agent-Skills.md) | 用到才翻的操作手册 |
+| [10 Harness 与 .agent 目录](10-Harness与Agent目录.md) | 发动机之外，还要整车 |
+| [11 Computer Use](11-Computer-Use.md) | 没 API 时，让 AI 点屏幕 |
+| [12 工作流与多 Agent](12-工作流与多Agent.md) | 先单 Agent，有瓶颈才拆 |
+| [13 框架选型](13-框架选型.md) | 框架省你重复劳动，不替你担责任 |
+| [14 Electron 集成](14-Electron集成.md) | 接进桌面，把边界守好 |
+| [15 评估、安全与上线](15-评估安全与上线.md) | 上线前必读 |
+| [16 学习地图与资源](16-学习地图与资源.md) | 新词速查 + 下一步 |
 
-## 推荐学习路径
+## 5 分钟跑起来
 
-```
-第一阶段（入门）  →  AI Agent 教程 第 1-3 章（概念 + LLM + 提示词）
-第二阶段（核心）  →  AI Agent 教程 第 4-5 章（Agent 架构 + 工具调用）
-第三阶段（进阶）  →  AI Agent 教程 第 6-8 章（RAG + 记忆 + 多 Agent）
-第四阶段（框架）  →  Mastra 教程 第 1-4 章（掌握 Mastra 框架核心）
-第五阶段（深入）  →  Mastra 教程 第 5-7 章（记忆 + RAG + 语音）
-第六阶段（实战）  →  AI Agent 教程 第 9-10 章（框架选型 + Electron 应用）
-第七阶段（生产）  →  AI Agent 教程 第 11-12 章 + Mastra 教程 第 8-9 章
+需要 Node.js LTS（建议 24），示例只用内置能力，不用装依赖：
+
+```bash
+node --version
+node --test examples/agent.test.mjs
+node examples/cli.mjs --mock "请假需要谁审批？"
 ```
 
-## 技术栈
+会看到 `status: "answered"`、带 `[leave-2026]` 的证据，和一次工具调用记录。
 
-- **语言**：JavaScript / TypeScript / Node.js（ESM）
-- **桌面框架**：Electron
-- **AI 框架**：Mastra、Vercel AI SDK、OpenAI Agents SDK、LangChain.js
-- **模型**：GPT-5、GPT-4o、Claude Opus 4.6、Claude Sonnet 4、Gemini 2.5、DeepSeek、Qwen、Ollama 本地模型
-- **协议**：MCP（Model Context Protocol）、A2A（Agent-to-Agent Protocol）
+**`--mock` 是写死的假模型，只是用来理解数据怎么流，不联网、不花钱。** 真模型怎么连，看[第 2 章](02-模型与API.md)。
 
-## License
+| 文件 | 干嘛的 |
+| --- | --- |
+| [examples/agent.mjs](examples/agent.mjs) | 资料、工具定义、校验、有限循环 |
+| [examples/cli.mjs](examples/cli.mjs) | 离线模拟 + 真 API 适配器 |
+| [examples/agent.test.mjs](examples/agent.test.mjs) | 不调模型的确定性测试 |
 
-MIT
+## 示例边界
+
+三个文件就是完整的命令行示例。主例只有两条资料的关键词检索，没有向量库、长期记忆、MCP、写操作、桌面 UI——这些在后几章一步步加，别把"需要自己补齐的"说成"复制就能用"。
+
+离线测试只能验证程序逻辑；真模型的准确率、引用忠实度、抗注入，得用你自己的账号、数据和预算去评。
+
+## 怎么看待"最新"
+
+API、协议、模型和价格一直在变。各章给了官方入口，[第 16 章](16-学习地图与资源.md)有集中索引。工程接入时，记下你实际用的 SDK、模型和协议版本。
+
+没有哪个新概念必须"全学完再开始"。先让一个小任务能看、能验证，再决定加什么。
